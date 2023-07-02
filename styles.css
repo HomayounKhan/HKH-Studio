@@ -1,0 +1,245 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a new rule for the nav container */
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #333; /* Match the background color of the nav */
+}
+
+/* Navigation */
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+/* Home page */
+.cover-image {
+  position: fixed; /* Changed from relative to fixed */
+  top: 0; /* Add top and left properties */
+  left: 0;
+  width: 100%; /* Changed width to 100% */
+  height: 100vh; /* Changed height to 100vh */
+  object-fit: cover; /* Changed from 'contain' to 'cover' */
+  z-index: -1; /* Position the cover image behind the other content */
+}
+
+.cover-text {
+  position: absolute;
+  top: 38%; /* Position the text in the center vertically */
+  left: 13%; /* Position the text in the center horizontally */
+  transform: translate(-50%, -50%); /* Offset the text position to be centered */
+  color: #ffffff; /* Set the text color */
+  font-size: 3rem; /* Set the text size */
+  text-align: center; /* Center the text */
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+.nav li {
+  margin-right: 10px;
+}
+
+.nav a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a:hover { /* Change the navbar content color to red on hover */
+  color: rgb(255, 255, 255);
+}
+
+.nav .active {
+  font-weight: bold;
+  background-color: #333; /* Change background color to black */
+}
+
+
+/* About page */
+.about-bg {
+  background-color: rgb(206, 206, 206);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Add a new rule for the about image */
+.about-image {
+  position: fixed; /* Changed from relative to fixed */
+  top: 0; /* Add top and left properties */
+  left: 0;
+  width: 100%; /* Changed width to 100% */
+  height: 100vh; /* Changed height to 100vh */
+  object-fit: cover; /* Changed from 'contain' to 'cover' */
+  z-index: -1; /* Position the cover image behind the other content */
+}
+.about h2 {
+
+  font-family: Copperplate, Papyrus, fantasy ;
+  color: white;
+  margin: 100px;
+}
+.about p {
+  font-family: Copperplate, Papyrus, fantasy ;
+  border: 2px solid #ffffff; /* Change the border width and color as needed */
+  padding: 35px; /* Add some padding inside the border */
+  margin: 10px auto; /* Add some margin outside the border and center the element horizontally */
+  box-sizing: border-box; /* Include the border and padding in the element's total width and height */
+  width: 100%; /* Set the width to 100% of the parent container */
+  max-width: 500px; /* Set a maximum width to wrap the paragraph */
+  display: block;
+  border-radius: 4%;
+  color: white;
+}
+
+
+/* Book & Contact page */
+.book-contact-bg {
+  background-color: rgb(206, 206, 206);
+}
+/* Container for the three sections */
+.sections-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+/* Individual section styles */
+.section {
+  border: 2px solid #000; /* Set the border width and color */
+  padding: 15px; /* Add some padding inside the border */
+  box-sizing: border-box; /* Include the border and padding in the element's total width and height */
+  width: calc(100% / 3 - 20px); /* Calculate the width for each section */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .sections-container {
+    flex-direction: column;
+  }
+
+  .section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.booking, .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  font-family: Copperplate, Papyrus, fantasy ;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label, input {
+  margin: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #000000;
+  border: none;  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style the booking section */
+.booking {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #848383;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.booking h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #070707;
+  font-family: Copperplate, Papyrus, fantasy ;
+}
+
+.booking form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.booking label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-family: Copperplate, Papyrus, fantasy ;
+}
+
+.booking input {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.booking button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #333;
+  color: rgb(124, 122, 122);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Copperplate, Papyrus, fantasy ;
+}
+
+.booking button:hover {
+  background-color: #444;
+}
+
+.section h1 {
+
+  font-family: Copperplate, Papyrus, fantasy ;
+}
+.section p {
+
+  font-family: Copperplate, Papyrus, fantasy ;
+}
